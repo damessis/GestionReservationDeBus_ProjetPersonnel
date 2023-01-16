@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1350.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <children>
+      <Label text="Trajets">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="770.0" prefWidth="1065.0" styleClass="principalhbox" stylesheets="@../theme/DashboardStylesheet.css">
+         <children>
+            <VBox prefHeight="735.0" prefWidth="500.0" styleClass="rightsideborder" stylesheets="@../theme/DashboardStylesheet.css">
+               <children>
+                  <Label text="Enregistrement d'un nouveau trajet">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane prefHeight="274.0" prefWidth="499.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Ville de départ">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Ville d'arrivée" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_villeDepartTrajet" textFill="RED" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_villeArriveeTrajet" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Tarif" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Durée" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_tarifTrajet" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_dureeTrajet" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="trajet_Tarif" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="dureeTrajet" prefHeight="39.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ChoiceBox fx:id="villeDepartTrajet" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                        <ChoiceBox fx:id="villeArriveTrajet" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="70.0" prefWidth="499.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="327.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_effacerTrajet" mnemonicParsing="false" onAction="#effacerTrajet" onMouseEntered="#trajeteffacerSourisDedans" onMouseExited="#trajeteffacerSourisDehors" prefHeight="31.0" prefWidth="90.0" text="Effacer">
+                           <GridPane.margin>
+                              <Insets left="210.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <Label text="Actions">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="215.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_supprimerTrajet" mnemonicParsing="false" onAction="#supprimerTrajet" onMouseEntered="#trajetsupprimerSourisDedans" onMouseExited="#trajetsupprimerSourisDehors" text="Supprimer" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_modifierTrajet" mnemonicParsing="false" onAction="#modifierTrajet" onMouseEntered="#trajetmodifierSourisDedans" onMouseExited="#trajetmodifierSourisDehors" prefHeight="41.0" prefWidth="104.0" text="Modifier" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_ajouterTrajet" mnemonicParsing="false" onAction="#ajouterTrajet" onMouseEntered="#trajetajouterSourisDedans" onMouseExited="#trajetajouterSourisDehors" prefHeight="41.0" prefWidth="108.0" text="Ajouter" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_actualiserTrajet" mnemonicParsing="false" onAction="#actualiserTrajet" onMouseEntered="#trajetactualiserSourisDedans" onMouseExited="#trajetactualiserSourisDehors" text="Actualiser" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="718.0" prefWidth="826.0">
+               <children>
+                  <Label text="Liste des trajets">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="trajet_table" onMouseClicked="#modifierPrevisualisationTrajet" prefHeight="400.0" prefWidth="640.0">
+                     <columns>
+                        <TableColumn fx:id="trajet_table_id" prefWidth="98.0" text="id" />
+                        <TableColumn fx:id="trajet_table_villeDepart" prefWidth="151.0" text="Ville de départ" />
+                        <TableColumn fx:id="trajet_table_villeArrivee" prefWidth="153.0" text="Ville D'arrivée" />
+                        <TableColumn fx:id="trajet_table_tarif" prefWidth="121.0" text="Tarif" />
+                        <TableColumn fx:id="trajet_table_duree" prefWidth="125.0" text="Durée" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="50.0" right="125.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="158.0" prefWidth="260.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="158.0" prefWidth="159.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <Label text="Recherche par:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="trajetrecherche_vbox" alignment="TOP_CENTER" prefHeight="158.0" prefWidth="272.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <ChoiceBox fx:id="trajetrecherche_type" prefWidth="150.0">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="262.0" styleClass="search-container" stylesheets="@../theme/DashboardStylesheet.css">
+                                 <children>
+                                    <ImageView fx:id="trajetlancer_recherche" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#trajetlancer_recherche" onMouseEntered="#trajetlancer_rechercheSourisDedans" onMouseExited="#trajetlancer_rechercheSourisDehors" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/37.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="trajettexte_recherche" prefHeight="31.0" prefWidth="145.0" promptText="recherche" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="200.0" right="150.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1350.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <children>
+      <Label text="Chauffeur">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="770.0" prefWidth="1065.0" styleClass="principalhbox" stylesheets="@../theme/DashboardStylesheet.css">
+         <children>
+            <VBox prefHeight="688.0" prefWidth="957.0">
+               <children>
+                  <Label text="Liste des chauffeurs">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="chauffeur_tableCaissier" prefHeight="321.0" prefWidth="600.0">
+                     <columns>
+                        <TableColumn fx:id="chauffeur_tableCaissier_id" prefWidth="41.0" text="Id" />
+                        <TableColumn fx:id="chauffeur_tableCaissier_nom" prefWidth="106.0" text="Nom" />
+                        <TableColumn fx:id="chauffeur_tableCaissier_prenom" prefWidth="94.0" text="Prenom" />
+                        <TableColumn fx:id="chauffeur_tableCaissier_numTel" prefWidth="183.0" text="Numero de telephone" />
+                        <TableColumn fx:id="chauffeur_tableCaissier_tauxHoraire" prefWidth="102.0" text="Taux horaire" />
+                        <TableColumn fx:id="chauffeur_tableCaissier_categorie" prefWidth="110.0" text="Categorie" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="200.0" right="120.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="158.0" prefWidth="425.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="158.0" prefWidth="159.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <Label text="Recherche par:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="chauffeurrecherche_vboxCaissier" alignment="TOP_CENTER" prefHeight="158.0" prefWidth="272.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <ChoiceBox fx:id="chauffeurrecherche_typeCaissier" prefWidth="150.0">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="262.0" styleClass="search-container" stylesheets="@../theme/DashboardStylesheet.css">
+                                 <children>
+                                    <ImageView fx:id="chauffeurlancer_rechercheCaissier" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#chauffeurlancer_rechercheCaissier" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/37.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="chauffeurtexte_rechercheCaissier" prefHeight="31.0" prefWidth="134.0" promptText="recherche">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="280.0" right="240.0" top="70.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

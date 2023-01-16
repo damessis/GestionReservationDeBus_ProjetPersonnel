@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="bus_vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1350.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <children>
+      <Label text="Bus">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="770.0" prefWidth="1065.0" styleClass="principalhbox">
+         <children>
+            <VBox prefHeight="730.0" prefWidth="500.0" styleClass="rightsideborder">
+               <children>
+                  <Label text="Enregistrement d'un nouveau bus">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane prefHeight="303.0" prefWidth="433.0" stylesheets="@../theme/DashboardStylesheet.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="0.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Immatriculation" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_immatriculation" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="bus_Immatriculation" prefHeight="38.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Status" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Id">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="id" editable="false" prefHeight="41.0" prefWidth="166.0" promptText="ne rien saisir" GridPane.columnIndex="1" />
+                        <Label fx:id="erreur_capacitebus" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="bus_capacite" prefHeight="39.0" prefWidth="166.0" promptText="entre 14 et 91" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Capacité" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_statusbus" textFill="#ff0000fe" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="statusBus" editable="false" prefHeight="43.0" prefWidth="166.0" promptText="ne rien saisir pour la creation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="74.0" prefWidth="499.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="327.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_effacerbus" mnemonicParsing="false" onAction="#effacerbus" onMouseEntered="#buseffacerSourisDedans" onMouseExited="#buseffacerSourisDehors" prefHeight="31.0" prefWidth="90.0" text="Effacer">
+                           <GridPane.margin>
+                              <Insets left="210.0" top="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <Label text="Actions">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="210.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_supprimerbus" mnemonicParsing="false" onAction="#supprimerbus" onMouseEntered="#bussupprimerSourisDedans" onMouseExited="#bussupprimerSourisDehors" text="Supprimer" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="90.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_modifierbus" mnemonicParsing="false" onAction="#modifierbus" onMouseEntered="#busmodifierSourisDedans" onMouseExited="#busmodifierSourisDehors" prefHeight="41.0" prefWidth="106.0" text="Modifier" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_ajouterbus" mnemonicParsing="false" onAction="#ajouterbus" onMouseEntered="#busajouterSourisDedans" onMouseExited="#busajouterSourisDehors" prefHeight="41.0" prefWidth="106.0" text="Ajouter" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="90.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_actualiserbus" mnemonicParsing="false" onAction="#actualiserbus" onMouseEntered="#busactualiserSourisDedans" onMouseExited="#busactualiserSourisDehors" text="Actualiser" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="718.0" prefWidth="787.0" stylesheets="@../theme/DashboardStylesheet.css">
+               <children>
+                  <Label text="Liste des bus">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="bus_table" onMouseClicked="#modifierPrevesualisationbus" prefHeight="372.0" prefWidth="679.0">
+                     <columns>
+                        <TableColumn fx:id="bus_table_id" prefWidth="122.0" text="id" />
+                        <TableColumn fx:id="bus_table_immatriculation" prefWidth="195.0" text="immatriculation" />
+                        <TableColumn fx:id="bus_table_capacité" prefWidth="176.0" text="Capacite" />
+                        <TableColumn fx:id="bus_table_status" prefWidth="119.0" text="Status" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="150.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="158.0" prefWidth="424.0" stylesheets="@../theme/DashboardStylesheet.css">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="158.0" prefWidth="159.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <Label text="Recherche par:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="busrecherche_vbox" alignment="TOP_CENTER" prefHeight="158.0" prefWidth="272.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <ChoiceBox fx:id="busrecherche_type" prefWidth="150.0">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="262.0" styleClass="search-container" stylesheets="@../theme/DashboardStylesheet.css">
+                                 <children>
+                                    <ImageView fx:id="buslancer_recherche" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#buslancer_recherche" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/37.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="bustexte_recherche" prefHeight="31.0" prefWidth="128.0" promptText="recherche" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="200.0" right="210.0" top="70.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1500.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <children>
+      <Label text="Voyage">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="770.0" prefWidth="1065.0" styleClass="principalhbox" stylesheets="@../theme/DashboardStylesheet.css">
+         <children>
+            <VBox prefHeight="718.0" prefWidth="500.0" styleClass="rightsideborder" stylesheets="@../theme/DashboardStylesheet.css">
+               <children>
+                  <Label text="Enregistrement d'un nouveau voyage">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane prefHeight="381.0" prefWidth="499.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Date du voyage">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Heure de départ" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_dateVoyageVoyage" textFill="RED" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_heureDepartVoyage" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="heureDepart" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <DatePicker fx:id="dateVoyage" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                        <Label text="Date limite reservation" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Nombre de siege disponible" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Bus" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Chauffeur" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Trajet" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_busVoyage" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_chauffeurVoyage" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_trajetVoyage" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_limitereservationVoyage" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="erreur_nbreSiegeVoyage" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="limitReservation" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="siegeDispo" prefHeight="41.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <ChoiceBox fx:id="bus" prefHeight="42.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ChoiceBox fx:id="chauffeur" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ChoiceBox fx:id="trajet" prefHeight="42.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="40.0" prefWidth="433.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="327.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_effacerVoyage" mnemonicParsing="false" onAction="#effacerVoyage" onMouseEntered="#voyageeffacerSourisDedans" onMouseExited="#voyageeffacerSourisDehors" prefHeight="31.0" prefWidth="90.0" text="Effacer">
+                           <GridPane.margin>
+                              <Insets left="210.0" top="30.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <Label text="Actions">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="215.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="102.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="121.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="188.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_supprimerVoyage" mnemonicParsing="false" onAction="#supprimerVoyage" onMouseEntered="#voyagesupprimerSourisDedans" onMouseExited="#voyagesupprimerSourisDehors" text="Supprimer" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_modifierVoyage" mnemonicParsing="false" onAction="#modifierVoyage" onMouseEntered="#voyagemodifierSourisDedans" onMouseExited="#voyagemodifierSourisDehors" prefHeight="40.0" prefWidth="99.0" text="Modifier" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_ajouterVoyage" mnemonicParsing="false" onAction="#ajouterVoyage" onMouseEntered="#voyageajouterSourisDedans" onMouseExited="#voyageajouterSourisDehors" prefHeight="31.0" prefWidth="90.0" text="Ajouter" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_actualiserVoyage" mnemonicParsing="false" onAction="#actualiserVoyage" onMouseEntered="#voyageactualiserSourisDedans" onMouseExited="#voyageactualiserSourisDehors" text="Actualiser" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_creerReservationVoyage" mnemonicParsing="false" onAction="#creerReservationVoyage" onMouseEntered="#voyagecreerReservationSourisDedans" onMouseExited="#voyagecreerReservationSourisDehors" prefHeight="40.0" prefWidth="190.0" text="Creer une reservation" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="718.0" prefWidth="901.0">
+               <children>
+                  <Label text="Liste des voyages">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="voyage_table" onMouseClicked="#modifierVoyagePrevisualisation" prefHeight="400.0" prefWidth="640.0" stylesheets="@../theme/DashboardStylesheet.css">
+                     <columns>
+                        <TableColumn fx:id="voyage_table_id" prefWidth="29.0" text="Id" />
+                        <TableColumn fx:id="voyage_table_date" prefWidth="107.0" text="Date Voyage" />
+                        <TableColumn fx:id="voyage_table_heureDep" prefWidth="103.0" text="Heure depart" />
+                        <TableColumn fx:id="voyage_table_heureArriv" prefWidth="107.0" text="Heure arrivée" />
+                        <TableColumn fx:id="voyage_table_status" prefWidth="64.0" text="Status" />
+                        <TableColumn fx:id="voyage_table_limitReservation" prefWidth="135.0" text="Limite reservation" />
+                        <TableColumn fx:id="voyage_table_nbreSiege" prefWidth="156.0" text="Nombre siege dispo" />
+                        <TableColumn fx:id="voyage_table_bus" prefWidth="40.0" text="Bus" />
+                        <TableColumn fx:id="voyage_table_chauffeur" prefWidth="81.0" text="Chauffeur" />
+                        <TableColumn fx:id="voyage_table_trajet" prefWidth="59.0" text="Trajet" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="158.0" prefWidth="424.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="158.0" prefWidth="159.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <Label text="Recherche par:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="voyagerecherche_vbox" alignment="TOP_CENTER" prefHeight="158.0" prefWidth="272.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <ChoiceBox fx:id="voyagerecherche_type" prefWidth="150.0">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="262.0" styleClass="search-container" stylesheets="@../theme/DashboardStylesheet.css">
+                                 <children>
+                                    <ImageView fx:id="voyagelancer_recherche" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#voyagelancer_recherche" onMouseEntered="#voyagelancer_rechercheSourisDedans" onMouseExited="#voyagelancer_rechercheSourisDehors" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/37.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="voyagetexte_recherche" prefHeight="31.0" prefWidth="160.0" promptText="recherche" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="200.0" right="200.0" top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

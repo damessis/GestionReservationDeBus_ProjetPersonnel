@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="800.0" stylesheets="@../theme/LoginStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <children>
+      <Pane prefHeight="580.0" prefWidth="300.0" styleClass="sidebar" stylesheets="@../theme/LoginStylesheet.css">
+         <children>
+            <Circle fill="WHITE" layoutX="300.0" layoutY="270.0" radius="49.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="65.0" fitWidth="76.0" layoutX="268.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/5.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/5.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="95.0" layoutY="270.0" text="Bus-Gest">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="489.0" layoutY="29.0" text="Bienvenue" textFill="#b3b6b9">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameError" alignment="CENTER" layoutX="385.0" layoutY="165.0" prefHeight="21.0" prefWidth="335.0" textFill="#ff0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="65.0" fitWidth="101.0" layoutX="521.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/9.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="380.0" layoutY="203.0" prefHeight="35.0" prefWidth="350.0" styleClass="textfld">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/31.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="loginUsername" prefHeight="35.0" prefWidth="300.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="380.0" layoutY="267.0" prefHeight="35.0" prefWidth="350.0" styleClass="textfld">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/12.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="loginPassword" prefHeight="35.0" prefWidth="300.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="380.0" layoutY="394.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #01509f; -fx-background-radius: 30px;">
+         <children>
+            <Button fx:id="loginVider" mnemonicParsing="false" onAction="#viderChamp" style="-fx-background-color: #236cf9; -fx-background-radius: 30px;" text="vider" textFill="WHITE" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="579.0" layoutY="394.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #01509f; -fx-background-radius: 30px;">
+         <children>
+            <Button fx:id="loginSeConnecter" mnemonicParsing="false" onAction="#seConnecter" style="-fx-background-color: #236cf9; -fx-background-radius: 30px;" text="se connecter" textFill="WHITE" />
+         </children>
+      </HBox>
+      <CheckBox fx:id="ch_seSouvenir" layoutX="380.0" layoutY="337.0" mnemonicParsing="false" text="Se souvenir de moi" />
+      <Hyperlink fx:id="hp_MdsOublie" layoutX="475.0" layoutY="512.0" onAction="#envoyerVersMdpOublie" onMouseClicked="#envoyerVersMdpOublie" text="Mot de passe oublié ?" />
+      <RadioButton fx:id="rb_administrateur" layoutX="414.0" layoutY="134.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="98.0" selected="true" text="Administrateur">
+         <toggleGroup>
+            <ToggleGroup fx:id="categorie" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rb_caissier" layoutX="654.0" layoutY="134.0" mnemonicParsing="false" text="Caissier" toggleGroup="$categorie" />
+      <Label fx:id="passwordError" alignment="CENTER" layoutX="381.0" layoutY="246.0" prefHeight="21.0" prefWidth="350.0" textFill="#ff0909">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rb_gestionnaire" layoutX="524.0" layoutY="134.0" mnemonicParsing="false" text="Gestionnaire" toggleGroup="$categorie" />
+   </children>
+</AnchorPane>

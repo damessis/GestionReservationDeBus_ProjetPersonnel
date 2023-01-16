@@ -1,0 +1,11 @@
+.sidebar{
+    -fx-background-color:skyblue; 
+}
+.rightpane{
+    -fx-background-color:#fff;
+}
+.textfld{
+    -fx-background-color:transparent;
+    -fx-border-color:#B4CCE3;
+    -fx-border-radius:50px;
+}
