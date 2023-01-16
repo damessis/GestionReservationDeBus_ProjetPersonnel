@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="dashbordCaissierVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1350.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css">
+         <children>
+            <Label fx:id="messageAccueilCaissierTableauDeBord">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <VBox>
+               <children>
+                  <Label text="Tableau de bord Caissier">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="bus_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_busTableauDeBordCaissier" onMouseEntered="#bus_image_tableaudebordCaissierSourisDedans" onMouseExited="#bus_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card1" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="63.0" text="BUS">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="126.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/44.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreBusTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="voyage_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_voyageTableauDeBordCaissier" onMouseEntered="#voyage_image_tableaudebordCaissierSourisDedans" onMouseExited="#voyage_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card2" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0" stylesheets="@../theme/DashboardStylesheet.css">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="171.0" text="VOYAGES">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="55.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/43.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreVoyageTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="client_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_clientTableauDeBordCaissier" onMouseEntered="#client_image_tableaudebordCaissierSourisDedans" onMouseExited="#client_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card3" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="231.0" text="CLIENT">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/45.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreClientTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="reservation_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_reservationTableauDeBordCaissier" onMouseEntered="#reservation_image_tableaudebordCaissierSourisDedans" onMouseExited="#reservation_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card4" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="209.0" text="RESERVATION">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/49.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreReservationTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="ticket_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_ticketTableauDeBordAdministrateurCaissier" onMouseEntered="#ticket_image_tableaudebordCaissierSourisDedans" onMouseExited="#ticket_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card5" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="138.0" text="TICKETS">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="96.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/46.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreTicketTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="trajet_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_trajetTableauDeBordAdministrateurCaissier" onMouseEntered="#trajet_image_tableaudebordCaissierSourisDedans" onMouseExited="#trajet_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card6" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0" stylesheets="@../theme/DashboardStylesheet.css">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="171.0" text="TRAJETS">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="55.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/42.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreTicketTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="chauffeur_image_tableaudebordCaissier" onMouseClicked="#envoyer_vers_chauffeurTableauDeBordCaissier" onMouseEntered="#chauffeur_image_tableaudebordCaissierSourisDedans" onMouseExited="#chauffeur_image_tableaudebordCaissierSourisDehors" prefHeight="200.0" prefWidth="240.0" styleClass="card7" stylesheets="@../theme/DashboardStylesheet.css">
+                           <children>
+                              <HBox prefHeight="52.0" prefWidth="240.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="231.0" text="CHAUFFEURS">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/47.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="tbd_caissier_nbreChauffeurTotal" prefHeight="25.0" prefWidth="63.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="date_du_jourTableauDeBordCaissier" styleClass="date-label" stylesheets="@../theme/DashboardStylesheet.css">
+               <VBox.margin>
+                  <Insets left="950.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <HBox maxWidth="1216.0" prefHeight="104.0" prefWidth="1216.0" styleClass="performance" stylesheets="@../theme/DashboardStylesheet.css">
+         <children>
+            <Label text="Performances du jour">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="156.0" prefWidth="245.0" styleClass="performance">
+               <children>
+                  <Label text="Nouveaux clients">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="performanceDuJourNouveauClientsTableauDeBordCaissier" alignment="CENTER" editable="false" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                     <VBox.margin>
+                        <Insets left="160.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="156.0" prefWidth="245.0" styleClass="performance">
+               <children>
+                  <Label text="Reservations effectuées">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="performanceDuJourReservationsEffectueTableauDeBordCaissier" alignment="CENTER" editable="false" prefHeight="50.0" prefWidth="156.0" style="-fx-background-color: transparent;">
+                     <VBox.margin>
+                        <Insets left="160.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="156.0" prefWidth="245.0" styleClass="performance">
+               <children>
+                  <Label text="Tickets vendus">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="performanceDuJourTicketVenduTableauDeBordCaissier" alignment="CENTER" editable="false" prefHeight="50.0" prefWidth="156.0" style="-fx-background-color: transparent;">
+                     <VBox.margin>
+                        <Insets left="160.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="156.0" prefWidth="245.0" styleClass="performance">
+               <children>
+                  <Label text="Recettes">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="performanceDuJourRecetteTableauDeBordCaissier" alignment="CENTER" editable="false" prefHeight="50.0" prefWidth="156.0" style="-fx-background-color: transparent;">
+                     <VBox.margin>
+                        <Insets left="160.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="284.0" prefWidth="1350.0">
+         <children>
+            <VBox prefHeight="283.0" prefWidth="571.0">
+               <children>
+                  <Label text="Voyages en cours">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="oyageEnCours_table_TableauDeBordCaissier" prefHeight="238.0" prefWidth="481.0">
+                     <columns>
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_id" prefWidth="23.0" text="Id" />
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_depart" prefWidth="67.0" text="Depart" />
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_arrive" prefWidth="70.0" text="Arrivee" />
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_trajet" prefWidth="117.0" text="Trajet" />
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_bus" prefWidth="33.0" text="Bus" />
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_chauffeur" prefWidth="77.0" text="Chauffeur" />
+                        <TableColumn fx:id="oyageEnCours_table_TableauDeBordCaissier_nbrePassagers" prefWidth="115.0" text="Nbre passagers" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="283.0" prefWidth="433.0">
+               <children>
+                  <Label text="Reservation effectué aujourd'hui">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="reservationEffectue_table_TableauDeBordCaissier" prefHeight="236.0" prefWidth="374.0">
+                     <columns>
+                        <TableColumn fx:id="reservationEffectue_table_TableauDeBordCaissier_id" prefWidth="34.0" text="Id" />
+                        <TableColumn fx:id="reservationEffectue_table_TableauDeBordCaissier_client" prefWidth="106.0" text="Client" />
+                        <TableColumn fx:id="reservationEffectue_table_TableauDeBordCaissier_voyage" prefWidth="103.0" text="Voyage" />
+                        <TableColumn fx:id="reservationEffectue_table_TableauDeBordCaissier_nbrePlace" prefWidth="113.0" text="Nbre de place" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="281.0" prefWidth="455.0">
+               <children>
+                  <Label text="Tickets vendu aujourd'hui">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="ticketVendus_table_TableauDeBordCaissier" prefHeight="236.0" prefWidth="354.0">
+                     <columns>
+                        <TableColumn fx:id="ticketVendus_table_TableauDeBordCaissier_id" prefWidth="35.0" text="Id" />
+                        <TableColumn fx:id="ticketVendus_table_TableauDeBordCaissier_numero" prefWidth="139.0" text="Numero" />
+                        <TableColumn fx:id="ticketVendus_table_TableauDeBordCaissieticketVendus_table_TableauDeBordCaissier_montant" prefWidth="89.0" text="Montant" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="125.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="generalborderpaneCaissier" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1700.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="754.0" prefWidth="315.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/5.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" text="Bus-Gest">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="tblbord_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_tbdMenuCaissier" onMouseEntered="#envoyer_vers_tbdMenuCaissierSourisDedans" onMouseExited="#envoyer_vers_tbdMenuCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/7.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelTbd_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Tableau de bord" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="bus_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_busMenuCaissier" onMouseEntered="#envoyer_vers_busMenuCaissierSourisDedans" onMouseExited="#envoyer_vers_busMenuCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/13.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelBus_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Bus" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="voyage_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_voyagemenuCaissier" onMouseEntered="#voyage_menuverticalCaissierSourisDedans" onMouseExited="#voyage_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/50.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelVoyage_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Voyages" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="client_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_clientMenuCaissier" onMouseEntered="#client_menuverticalCaissierSourisDedans" onMouseExited="#client_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/15.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelClient_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Clients" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="reservation_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_reservationMenuCaissier" onMouseEntered="#reservation_menuverticalCaissierSourisDedans" onMouseExited="#reservation_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/16.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelReservation_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Reservations" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="ticket_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_ticketMenuCaissier" onMouseEntered="#ticket_menuverticalCaissierSourisDedans" onMouseExited="#ticket_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/17.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelTicket_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Tickets" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="trajet_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_trajetMenuCaissier" onMouseEntered="#trajet_menuverticalCaissierSourisDedans" onMouseExited="#trajet_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/14.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelTrajet_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Trajets" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="chauffeur_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_chauffeurMenuCaissier" onMouseEntered="#chauffeur_menuverticalCaissierSourisDedans" onMouseExited="#chauffeur_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/51.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelChauffeur_menuverticalCaissier" style="-fx-padding: 0px 20px 0px 20px;" text="Chauffeurs" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="deconnexion_menuverticalCaissier" alignment="CENTER_LEFT" onMouseClicked="#activer_deconnexionMenuCaissier" onMouseEntered="#deconnexion_menuverticalCaissierSourisDedans" onMouseExited="#deconnexion_menuverticalCaissierSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/54.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-padding: 0px 20px 0px 20px;" text="Deconnexion" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="1700.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="35.0" prefWidth="980.0" />
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="250.0" styleClass="search-container" stylesheets="@../theme/DashboardStylesheet.css">
+               <children>
+                  <ImageView fx:id="menuCaissierlancer_recherche" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#menuCaissierlancerRechercheGo" onMouseEntered="#menuCaissierlancer_rechercheSourisDedans" onMouseExited="#menuCaissierlancer_rechercheSourisDehors" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/37.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="menuCaissiertexte_recherche" onMouseEntered="#menuCaissiertexte_rechercheSourisDedans" onMouseExited="#menuCaissiertexte_rechercheSourisDehors" promptText="recherche" />
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <ImageView fx:id="moncompteCaissier" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#envoyerVersMonCompteCaissier" onMouseEntered="#moncompteCaissierSourisDedans" onMouseExited="#moncompteCaissierSourisDehors" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/40.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="petiteListeInformationDeMonCompteCaissier" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#DeroulerpetiteListeInformationDeMonCompteCaissier" onMouseEntered="#petiteListeInformationDeMonCompteCaissierSourisDedans" onMouseExited="#petiteListeInformationDeMonCompteCaissierSourisDehors" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/41.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Label text="Copyright 2020-2021 DAMESSI SAMUEL HERVE" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

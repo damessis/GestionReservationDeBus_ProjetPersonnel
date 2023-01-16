@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="generalborderpaneGestionnaire" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1700.0" styleClass="primarycolor" stylesheets="@../theme/DashboardStylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.FXMLDocumentController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="754.0" prefWidth="315.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/5.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" text="Bus-Gest">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="tblbord_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_tbdMenuGestionnaire" onMouseEntered="#envoyer_vers_tbdMenuGestionnaireSourisDedans" onMouseExited="#envoyer_vers_tbdMenuGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/7.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelTbd_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Tableau de bord" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="bus_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_busMenuGestionnaire" onMouseEntered="#envoyer_vers_busMenuGestionnaireSourisDedans" onMouseExited="#envoyer_vers_busMenuGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/13.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelBus_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Bus" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="voyage_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_voyagemenuGestionnaire" onMouseEntered="#voyage_menuverticalGestionnaireSourisDedans" onMouseExited="#voyage_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/50.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelVoyage_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Voyages" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="client_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_clientMenuGestionnaire" onMouseEntered="#client_menuverticalGestionnaireSourisDedans" onMouseExited="#client_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/15.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelClient_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Clients" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="reservation_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_reservationMenuGestionnaire" onMouseEntered="#reservation_menuverticalGestionnaireSourisDedans" onMouseExited="#reservation_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/16.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelReservation_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Reservations" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="ticket_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_ticketMenuGestionnaire" onMouseEntered="#ticket_menuverticalGestionnaireSourisDedans" onMouseExited="#ticket_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/17.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelTicket_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Tickets" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="trajet_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_trajetMenuGestionnaire" onMouseEntered="#trajet_menuverticalGestionnaireSourisDedans" onMouseExited="#trajet_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/14.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelTrajet_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Trajets" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="chauffeur_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#envoyer_vers_chauffeurMenuGestionnaire" onMouseEntered="#chauffeur_menuverticalGestionnaireSourisDedans" onMouseExited="#chauffeur_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/51.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="indiqueLaPageActuelChauffeur_menuverticalGestionnaire" style="-fx-padding: 0px 20px 0px 20px;" text="Chauffeurs" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="deconnexion_menuverticalGestionnaire" alignment="CENTER_LEFT" onMouseClicked="#activer_deconnexionMenuGestionnaire" onMouseEntered="#deconnexion_menuverticalGestionnaireSourisDedans" onMouseExited="#deconnexion_menuverticalGestionnaireSourisDehors" prefHeight="45.0" prefWidth="200.0" style="-fx-padding: 0px 20px 0px 20px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/54.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-padding: 0px 20px 0px 20px;" text="Deconnexion" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="1700.0" styleClass="white-background" stylesheets="@../theme/DashboardStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="35.0" prefWidth="980.0" />
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="250.0" styleClass="search-container" stylesheets="@../theme/DashboardStylesheet.css">
+               <children>
+                  <ImageView fx:id="menuGestionnairelancer_recherche" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#menuGestionnairelancerRechercheGo" onMouseEntered="#menuGestionnairelancer_rechercheSourisDedans" onMouseExited="#menuGestionnairelancer_rechercheSourisDehors" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/37.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="menuGestionnairetexte_recherche" onMouseEntered="#menuGestionnairetexte_rechercheSourisDedans" onMouseExited="#menuGestionnairetexte_rechercheSourisDehors" promptText="recherche" />
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <ImageView fx:id="moncompteGestionnaire" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#envoyerVersMonCompteGestionnaire" onMouseEntered="#moncompteGestionnaireSourisDedans" onMouseExited="#moncompteGestionnaireSourisDehors" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/40.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="petiteListeInformationDeMonCompteGestionnaire" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#DeroulerpetiteListeInformationDeMonCompteGestionnaire" onMouseEntered="#petiteListeInformationDeMonCompteGestionnaireSourisDedans" onMouseExited="#petiteListeInformationDeMonCompteGestionnaireSourisDehors" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/41.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Label text="Copyright 2020-2021 DAMESSI SAMUEL HERVE" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
